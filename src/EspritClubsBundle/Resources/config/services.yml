@@ -1,0 +1,4 @@
+services:
+#    esprit_clubs.example:
+#        class: EspritClubsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

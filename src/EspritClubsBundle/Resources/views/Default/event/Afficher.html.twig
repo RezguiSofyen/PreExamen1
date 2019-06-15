@@ -1,0 +1,32 @@
+<html>
+<body>
+<center>
+
+
+{%  if table != null %}
+<h1>Liste des evenment</h1>
+<table  border="2" align="center">
+    <tr>
+        <td>Club</td>
+        <td>Evénement</td>
+        <td>Date</td>
+        <td>Supprimer</td>>
+        <td>Modifier</td>>
+    </tr>
+    {% for i in table %}
+        <tr>
+            <td> {{ i.club.nom }}</td>
+            <td>{{ i.titre }}</td>
+            <td>{{ i.date |date('d-m-Y') }}</td>
+            <td><a href="{{ path('esprit_clubs_Suprimer',{'id':i.id}) }}"> Supprimer </a> </td>
+            <td><a href="{{ path('esprit_clubs_Modifier',{'id':i.id}) }}"> Modifier </a> </td>
+            <td><a href="{{ path('esprit_clubs_Participer',{'id':i.id}) }}"> Participer </a> </td>
+
+        </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+</center>
+</body>
+</html>
